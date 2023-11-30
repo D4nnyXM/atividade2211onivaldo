@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout  Responsivo de Tres Colunas</title>
+    <style>
+        .container {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;            
+            border: 2px solid red;  
+        }
+        .coluna {    
+            background-color: aliceblue;
+            padding: 20px;  
+            width: 85%;  
+            }
+            @media (max-width: 600px) { 
+                .container {
+                    font-family: 'Times New Roman', Times, serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;            
+                    border: 2px solid red;           
+                } 
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="coluna"> Coluna 1</div>
+        <div class="coluna"> Coluna 2</div>
+        <div class="coluna"> Coluna 3</div>
+    </div>
+</body>
+</html>
+
+
+
+/* Alinhamento central
+#containerAlignCenter { align-items: center; }
+
+ Alinhamento diferenciado 
+#containerAlignDifferent {
+  align-items: flex-end;
+}
+#containerAlignDifferent .item:nth-child(2) { align-self: center; }
+#containerAlignDifferent .item:last-child { align-self: flex-start; }
+
+ Distribuição vertical e Alinhamento vertical diferenciado 
+#containerVerticalDistribution,
+#containerVerticalAlignDifferent { align-items: stretch; }
+#containerVerticalDistribution .item:last-child,
+ #containerVerticalAlignDifferent .item:first-child { flex: 3; } 
+
+ Alinhamento vertical diferenciado 
+ #containerVerticalAlignDifferent .item:nth-child(2), 
+ #containerVerticalAlignDifferent .item:last-child { align-self: flex-end; }  */
