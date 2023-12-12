@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegaçao Responsivo</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+    
+        nav {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        nav h1 {
+          margin: 0;
+        }
+    
+        nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+        }
+    
+        nav li {
+          margin-right: 20px;
+        }
+    
+        @media screen and (max-width: 600px) {
+          nav {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+    
+          nav ul {
+            margin-top: 10px;
+            display: none;
+          }
+    
+          nav li {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+    
+          .menu-icon {
+            display: block;
+            cursor: pointer;
+          }
+    
+          .menu-icon::before {
+            content: '\2630';
+            font-size: 24px;
+          }
+    
+          nav.show ul {
+            display: flex;
+          }
+        }
+      </style>
+</head>
+<body>
+    <nav>
+        <h1>Exemplo de site</h1>
+        <div class="menu-icon"></div>
+        <ul>
+          <li><a href="#">Página Inicial</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Conteúdo da página aqui -->
+    
+      <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+          document.querySelector('nav').classList.toggle('show');
+        });
+      </script>
+</body>
+</html>

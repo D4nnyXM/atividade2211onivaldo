@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas flexíveis com Alinhamento</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 100dvh;
+        }
+
+        section {
+            display: flex;
+            gap: 2rem;
+        }
+
+        header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-bottom: 0.6rem;
+        }
+
+        .container1,
+        .container2,
+        .container3,
+        .container4 {
+            display: flex;
+            flex-direction: row;
+            width: 360px;
+            height: 100px;
+            border: 2px solid rgb(216, 27, 27);
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .container1,
+        .container2,
+        .container3,
+        .container4 {
+            justify-content: center;
+            align-items: center;
+        }
+        /*container 1 */
+        .item {
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+         /*container 2 */
+        .item3{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: self-start;
+
+        }
+        .item2{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: center ;
+        }
+        .item1{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: self-end;
+        }
+         /*container 3 */
+        .item4{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: flex-start;
+        }
+        .item5{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: stretch;
+        }
+        .item6{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: self-end;
+        }
+
+         /*container 4 */
+
+         .item7{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: stretch;
+        }
+        .item8{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: self-end;
+        }
+        .item9{
+            text-align: center;
+            background-color: rgb(202, 119, 9);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            align-self: self-start;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <header>Container 1</header>
+                <div class="container1">
+                    <div class="item">item 1</div>
+                    <div class="item">Conteúdo <br>do Item 2</div>
+                    <div class="item"> Item 3</div>
+                </div>
+            </div>
+
+            <div>
+                <header>Container 2</header>
+                <div class="container2">
+                    <div class="item1">item 1</div>
+                    <div class="item2">Conteúdo do Item 2</div>
+                    <div class="item3"> Item 3</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <header>Container 3</header>
+                <div class="container3">
+                    <div class="item4">item 1</div>
+                    <div class="item5">Conteúdo do Item 2</div>
+                    <div class="item6"> Item 3</div>
+                </div>
+            </div>
+
+            <div>
+                <header>Container 4</header>
+                <div class="container4">
+                    <div class="item7">item 1</div>
+                    <div class="item8">Conteúdo do Item 2</div>
+                    <div class="item9"> Item 3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
